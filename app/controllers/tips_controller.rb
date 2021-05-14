@@ -11,11 +11,11 @@ class TipsController < ApplicationController
 
   def edit
   end
-  
+
   def create
     tip = Tip.new(tip_params)
     tip.save
-    redirect_to tip_path(params[:id])
+    redirect_to tip_path(tip.id)
   end
 
   private
