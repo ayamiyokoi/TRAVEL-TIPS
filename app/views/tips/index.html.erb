@@ -4,10 +4,26 @@
       <h1>Unitead States of America</h1>
       <h3>Manners</h3>
       <h3>Transformation</h3>
-      
+
     </div>
     <div>
-      <
+      <h1>Tips</h1>
+       <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @tips.each do |tip| %>
+          <tr>
+            <td><%= link_to tip.title, tip_path(tip.id) %></td>
+            <td><%= tip.body %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

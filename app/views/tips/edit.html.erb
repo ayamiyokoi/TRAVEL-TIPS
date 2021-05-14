@@ -1,2 +1,12 @@
-<h1>Tips#edit</h1>
-<p>Find me in app/views/tips/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <h1>Edit</h1>
+      <%= form_with model:@tip, url:"/tips/#{@tip.id}", local:true do |f| %>
+        <p><%= f.label :Title %><%= f.text_field :title %></p>
+        <p><%= f.label :Content %><%= f.text_field :body %></p>
+        <%= f.submit 'Update' %>
+      <% end %>
+    </div>
+  </div>
+</div>

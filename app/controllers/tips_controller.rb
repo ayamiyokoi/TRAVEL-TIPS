@@ -1,8 +1,10 @@
 class TipsController < ApplicationController
   def index
+    @tips = Tip.all
   end
 
   def show
+    @tip = Tip.find(params[:id])
   end
 
   def new
@@ -10,6 +12,13 @@ class TipsController < ApplicationController
   end
 
   def edit
+    @tip = Tip.find(params[:id])
+  end
+
+  def update
+    tip = Tip.find(params[:id])
+    tip.update(tip_params)
+    redirect_to tip_path(tip.id)
   end
 
   def create

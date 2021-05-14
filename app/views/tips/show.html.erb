@@ -1,2 +1,25 @@
-<h1>Tips#show</h1>
-<p>Find me in app/views/tips/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <h1>Tips</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @tip.title %></td>
+            <td><%= @tip.body %></td>
+            <td><%= link_to 'Back', tips_path %></td>
+            <td><%= link_to 'Edit', edit_tip_path(@tip.id) %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
