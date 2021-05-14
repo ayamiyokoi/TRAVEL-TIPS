@@ -7,6 +7,7 @@
           <tr>
             <th>Title</th>
             <th>Content</th>
+            <th>Image</th>
             <th></th>
             <th></th>
             <th></th>
@@ -19,6 +20,7 @@
             <td><%= attachment_image_tag @tip, :image, size: '50x50', format: 'jpeg' %></td>
             <td><%= link_to 'Back', tips_path %></td>
             <td><%= link_to 'Edit', edit_tip_path(@tip.id) %></td>
+            <td><%= link_to "Destroy", tip_path(@tip.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
           </tr>
         </tbody>
       </table>

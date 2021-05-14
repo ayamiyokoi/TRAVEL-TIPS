@@ -26,6 +26,12 @@ class TipsController < ApplicationController
     tip.save
     redirect_to tip_path(tip.id)
   end
+  
+  def destroy
+    tip = Tip.find(params[:id])
+    tip.destroy
+    redirect_to tips_path
+  end
 
   private
   # ストロングパラメータ
