@@ -13,6 +13,7 @@
           <tr>
             <th>Title</th>
             <th>Content</th>
+            <th>Image</th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
           <tr>
             <td><%= link_to tip.title, tip_path(tip.id) %></td>
             <td><%= tip.body %></td>
+            <td><%= attachment_image_tag tip, :image, size: '50x50', format: 'jpeg' %></td>
           </tr>
           <% end %>
         </tbody>

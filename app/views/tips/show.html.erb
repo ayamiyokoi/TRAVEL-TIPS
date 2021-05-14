@@ -9,12 +9,14 @@
             <th>Content</th>
             <th></th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><%= @tip.title %></td>
             <td><%= @tip.body %></td>
+            <td><%= attachment_image_tag @tip, :image, size: '50x50', format: 'jpeg' %></td>
             <td><%= link_to 'Back', tips_path %></td>
             <td><%= link_to 'Edit', edit_tip_path(@tip.id) %></td>
           </tr>

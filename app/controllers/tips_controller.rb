@@ -30,6 +30,6 @@ class TipsController < ApplicationController
   private
   # ストロングパラメータ
   def tip_params
-    params.require(:tip).permit(:title, :body)
+    params.require(:tip).permit(:title, :body, :image)
   end
 end

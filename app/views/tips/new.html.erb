@@ -5,6 +5,7 @@
       <%= form_with model:@tip, url:'/tips', local:true do |f| %>
         <p><%= f.label :Title %><%= f.text_field :title %></p>
         <p><%= f.label :Content %><%= f.text_field :body %></p>
+        <p><%= f.label :Image %><%= f.attachment_field :image %></p>
         <p><%= f.submit 'Create Tip' %></p>
       <% end %>
     </div>
